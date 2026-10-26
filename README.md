@@ -1,4 +1,4 @@
-6. Binary Trees
+16. Binary Trees
 Question Description: Implement a Binary Tree in which each node can have at most two children: a left child and a right child. Support node creation, insertion according to a defined strategy, and traversal operations such as preorder, inorder, and postorder.
 
 Test Cases:
