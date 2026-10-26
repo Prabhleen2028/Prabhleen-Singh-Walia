@@ -1,18 +1,24 @@
-14. Bin Sort
-Question Description: Implement Bin Sort by distributing elements into bins based on their values or digit positions. Place elements into the appropriate bins and collect them in order. For this example, use non-negative integers from 0 to 9 as direct bin indices.
+15. Tower of Hanoi
+Question Description: Implement the Tower of Hanoi problem using recursion. Move \(n\) disks from a source rod to a destination rod using an auxiliary rod, following these rules: only one disk can be moved at a time, only the top disk can be moved, and a larger disk cannot be placed on a smaller disk.
 
 Test Cases:
-- Test Case 1: Sort single-digit integers.
-  - Input: 4 2 7 1 9 3
-  - Expected Output: 1 2 3 4 7 9
-- Test Case 2: Sort integers with repeated values.
-  - Input: 5 2 5 1 2 3
-  - Expected Output: 1 2 2 3 5 5
+- Test Case 1: Solve the problem for 3 disks.
+  - Input: n = 3, Source: A, Auxiliary: B, Destination: C
+  - Expected Output:
+    1. Move disk 1 from A to C
+    2. Move disk 2 from A to B
+    3. Move disk 1 from C to B
+    4. Move disk 3 from A to C
+    5. Move disk 1 from B to A
+    6. Move disk 2 from B to C
+    7. Move disk 1 from A to C
+  - Total Moves: 7
+- Test Case 2: Solve the problem for 2 disks.
+  - Input: n = 2
+  - Expected Output: 3 moves
 Time Complexity:
-- Best Case: \(O(n+k)\)
-- Average Case: \(O(n+k)\), for direct-index bins or an appropriate distribution
-- Worst Case: Depends on the bin arrangement and the method used to handle collisions or sort individual bins
-- Space Complexity: \(O(n+k)\)
-Here, \(n\) is the number of elements and \(k\) is the number of bins. In this example, \(k=10\).
-
-Note: Bin Sort is a distribution-based sorting approach. Its complexity depends on the value range and how elements are assigned to bins.
+- Best Case: \(O(2^n)\)
+- Average Case: \(O(2^n)\)
+- Worst Case: \(O(2^n)\)
+- Space Complexity: \(O(n)\) for the recursive call stack
+- Minimum Number of Moves: \(2^n-1\)
