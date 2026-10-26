@@ -1,19 +1,21 @@
-18. AVL Trees
-Question Description: Implement an AVL Tree, a self-balancing Binary Search Tree. After insertion or deletion, calculate the balance factor of affected nodes and perform rotations when necessary to maintain a balance factor of \(-1\), \(0\), or \(+1\).
+19. Parenthesis Matching
+Question Description: Implement a program to check whether parentheses and brackets in an expression are balanced using a Stack. Every opening bracket must have a corresponding closing bracket of the same type, and the brackets must close in the correct order. The program may support (), {}, and [].
 
 Test Cases:
-- Test Case 1: Insert nodes that cause a Left-Left (LL) imbalance.
-  - Input Sequence: insert(30), insert(20), insert(10)
-  - Expected Output (preorder after rotation): 20 10 30
-  - Expected Result: The tree becomes balanced after a right rotation.
-- Test Case 2: Insert nodes that cause a Right-Right (RR) imbalance.
-  - Input Sequence: insert(10), insert(20), insert(30)
-  - Expected Output (preorder after rotation): 20 10 30
-  - Expected Result: The tree becomes balanced after a left rotation.
+- Test Case 1: Check a balanced expression.
+  - Input: {[()]}
+  - Expected Output: Balanced
+- Test Case 2: Check an unbalanced expression.
+  - Input: {[(])}
+  - Expected Output: Not Balanced
+- Test Case 3: Check an expression with unmatched opening brackets.
+  - Input: ((a+b)
+  - Expected Output: Not Balanced
+- Test Case 4: Check an expression with no brackets.
+  - Input: a+b*c
+  - Expected Output: Balanced
 Time Complexity:
-- Insertion: \(O(\log n)\)
-- Searching: \(O(\log n)\)
-- Deletion: \(O(\log n)\)
-- Single Rotation (left or right): \(O(1)\)
-- Traversal: \(O(n)\)
-- Space Complexity: \(O(n)\)
+- Best Case: \(O(n)\) upper-bounded by the length of the expression
+- Average Case: \(O(n)\)
+- Worst Case: \(O(n)\)
+- Space Complexity: \(O(n)\) in the worst case, when all characters are opening brackets
