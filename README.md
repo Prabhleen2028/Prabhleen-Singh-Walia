@@ -1,16 +1,15 @@
-11. Heap Sort
-Question Description: Implement Heap Sort to arrange an array in ascending order using a Max Heap. First build the heap, then repeatedly move the maximum element to the end of the array and restore the heap property.
+12. Bucket Sort
+Question Description: Implement Bucket Sort by distributing elements into several buckets according to their values. Sort each bucket individually and combine the buckets to obtain the final sorted array. For the example below, assume the input consists of numbers in the range \([0,1)\).
 
 Test Cases:
-- Test Case 1: Sort an unsorted array.
-  - Input: 12 11 13 5 6 7
-  - Expected Output: 5 6 7 11 12 13
-- Test Case 2: Sort an array containing duplicate elements.
-  - Input: 4 10 3 5 3
-  - Expected Output: 3 3 4 5 10
+- Test Case 1: Sort decimal values.
+  - Input: 0.42 0.32 0.23 0.52 0.25 0.47 0.51
+  - Expected Output: 0.23 0.25 0.32 0.42 0.47 0.51 0.52
+- Test Case 2: Sort an array with repeated values.
+  - Input: 0.5 0.2 0.5 0.1
+  - Expected Output: 0.1 0.2 0.5 0.5
 Time Complexity:
-- Building the heap: \(O(n)\)
-- Best Case: \(O(n\log n)\)
-- Average Case: \(O(n\log n)\)
-- Worst Case: \(O(n\log n)\)
-- Auxiliary Space Complexity: \(O(1)\) for an iterative in-place implementation
+- Best Case: \(O(n+k)\)
+- Average Case: \(O(n+k)\), under a suitable distribution and bucket arrangement
+- Worst Case: \(O(n^2)\), if most elements fall into one bucket and the bucket sorting method is quadratic
+- Space Complexity: \(O(n+k)\)
