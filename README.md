@@ -1,16 +1,16 @@
-6. Circular Queue Using Array
-Question Description: Implement a Circular Queue using an array where the last position connects logically to the first position. Use modular arithmetic to reuse empty positions. Support enqueue, dequeue, front, and display operations.
+7. Queue Using Linked List
+Question Description: Implement a Queue using a linked list with enqueue, dequeue, front, and display operations. Maintain front and rear pointers so insertion takes place at the rear and deletion takes place at the front.
 
 Test Cases:
-- Test Case 1: Insert elements into a queue of capacity 5.
-  - Input Sequence: enqueue(10), enqueue(20), enqueue(30), enqueue(40)
-  - Expected Output: 10 20 30 40
-- Test Case 2: Delete two elements and insert two more.
-  - Input Sequence: dequeue(), dequeue(), enqueue(50), enqueue(60)
-  - Expected Output: 30 40 50 60
+- Test Case 1: Insert elements into the queue.
+  - Input Sequence: enqueue(10), enqueue(20), enqueue(30)
+  - Expected Output: 10 20 30
+- Test Case 2: Remove the front element.
+  - Operation: dequeue()
+  - Expected Output: Dequeued: 10; remaining queue: 20 30
 Time Complexity:
 - Enqueue: \(O(1)\)
 - Dequeue: \(O(1)\)
 - Front: \(O(1)\)
-- Display: \(O(n)\)
+- Display/Search: \(O(n)\)
 - Space Complexity: \(O(n)\)
