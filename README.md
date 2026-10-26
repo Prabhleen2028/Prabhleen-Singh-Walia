@@ -1,19 +1,19 @@
-17. Binary Search Tree (BST)
-Question Description: Implement a Binary Search Tree in which each node's left subtree contains smaller keys and its right subtree contains larger keys. Support insertion, searching, deletion, and inorder traversal.
+18. AVL Trees
+Question Description: Implement an AVL Tree, a self-balancing Binary Search Tree. After insertion or deletion, calculate the balance factor of affected nodes and perform rotations when necessary to maintain a balance factor of \(-1\), \(0\), or \(+1\).
 
 Test Cases:
-- Test Case 1: Insert elements into the BST.
-  - Input Sequence: insert(50), insert(30), insert(70), insert(20), insert(40), insert(60), insert(80)
-  - Expected Inorder Output: 20 30 40 50 60 70 80
-- Test Case 2: Search for an existing element.
-  - Operation: search(60)
-  - Expected Output: Element found
-- Test Case 3: Delete a leaf node.
-  - Operation: delete(20)
-  - Expected Inorder Output: 30 40 50 60 70 80
+- Test Case 1: Insert nodes that cause a Left-Left (LL) imbalance.
+  - Input Sequence: insert(30), insert(20), insert(10)
+  - Expected Output (preorder after rotation): 20 10 30
+  - Expected Result: The tree becomes balanced after a right rotation.
+- Test Case 2: Insert nodes that cause a Right-Right (RR) imbalance.
+  - Input Sequence: insert(10), insert(20), insert(30)
+  - Expected Output (preorder after rotation): 20 10 30
+  - Expected Result: The tree becomes balanced after a left rotation.
 Time Complexity:
-- Insertion: Average \(O(\log n)\); worst \(O(n)\)
-- Searching: Average \(O(\log n)\); worst \(O(n)\)
-- Deletion: Average \(O(\log n)\); worst \(O(n)\)
-- Inorder Traversal: \(O(n)\)
+- Insertion: \(O(\log n)\)
+- Searching: \(O(\log n)\)
+- Deletion: \(O(\log n)\)
+- Single Rotation (left or right): \(O(1)\)
+- Traversal: \(O(n)\)
 - Space Complexity: \(O(n)\)
