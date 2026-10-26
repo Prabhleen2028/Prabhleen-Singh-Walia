@@ -1,15 +1,16 @@
-1. Singly Linked List
-Question Description: Implement a Singly Linked List class or structure supporting fundamental operations such as insertion at the beginning (push_front), insertion at the end (push_back), deletion of nodes, and traversal/printing of elements.
+2. Doubly Linked List
+Question Description: Implement a Doubly Linked List in which each node contains data, a pointer to the next node, and a pointer to the previous node. Support insertion at both ends, deletion, and traversal in forward and backward directions.
 
 Test Cases:
-- Test Case 1: Insert elements 1, 2 at the front and 3, 4 at the back.
-  - Input Sequence: push_front(1), push_front(2), push_back(3), push_back(4)
-  - Expected Output: 2 1 3 4
-- Test Case 2: Delete from the back after insertions.
+- Test Case 1: Insert elements at the front and back.
+  - Input Sequence: push_front(10), push_front(20), push_back(30), push_back(40)
+  - Expected Output (forward): 20 10 30 40
+  - Expected Output (backward): 40 30 10 20
+- Test Case 2: Delete the last node.
   - Operation: pop_back()
-  - Expected Output: 2 1 3
+  - Expected Output (forward): 20 10 30
 Time Complexity:
-- Insertion at front (push_front): \(O(1)\)
-- Insertion at end (push_back) with tail pointer: \(O(1)\); without tail pointer: \(O(n)\)
-- Deletion from end (pop_back): \(O(n)\)
-- Traversal/Search: \(O(n)\)
+- Insertion at front: \(O(1)\)
+- Insertion at end with tail pointer: \(O(1)\)
+- Deletion at front/end with head and tail pointers: \(O(1)\)
+- Searching/Traversal: \(O(n)\)
