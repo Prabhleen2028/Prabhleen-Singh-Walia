@@ -1,15 +1,16 @@
-9. Quick Sort
-Question Description: Implement Quick Sort to sort an array using a pivot element. Partition the array so that smaller elements are placed on one side of the pivot and larger elements on the other, then recursively sort both partitions.
+10. Radix Sort
+Question Description: Implement Radix Sort to sort non-negative integers by processing digits position by position, starting from the least significant digit. A stable sorting method, such as Counting Sort, is used for each digit position.
 
 Test Cases:
-- Test Case 1: Sort an unsorted array.
-  - Input: 10 7 8 9 1 5
-  - Expected Output: 1 5 7 8 9 10
-- Test Case 2: Sort an array in descending order.
-  - Input: 9 7 5 3 1
-  - Expected Output: 1 3 5 7 9
+- Test Case 1: Sort integers with different numbers of digits.
+  - Input: 170 45 75 90 802 24 2 66
+  - Expected Output: 2 24 45 66 75 90 170 802
+- Test Case 2: Sort integers containing zeros and repeated digits.
+  - Input: 101 10 1 100 11
+  - Expected Output: 1 10 11 100 101
 Time Complexity:
-- Best Case: \(O(n\log n)\)
-- Average Case: \(O(n\log n)\)
-- Worst Case: \(O(n^2)\)
-- Space Complexity: \(O(\log n)\) on average for recursive stack space; worst case \(O(n)\)
+- Best Case: \(O(d(n+b))\)
+- Average Case: \(O(d(n+b))\)
+- Worst Case: \(O(d(n+b))\)
+- Space Complexity: \(O(n+b)\)
+Here, \(n\) is the number of elements, \(d\) is the number of digit positions, and \(b\) is the base (10 for decimal integers).
