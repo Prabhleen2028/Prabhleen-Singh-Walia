@@ -1,16 +1,16 @@
-2. Doubly Linked List
-Question Description: Implement a Doubly Linked List in which each node contains data, a pointer to the next node, and a pointer to the previous node. Support insertion at both ends, deletion, and traversal in forward and backward directions.
+3. Stack Using Array
+Question Description: Implement a Stack using an array that supports push, pop, peek (top element), and display operations. The stack follows the LIFO (Last In, First Out) principle.
 
 Test Cases:
-- Test Case 1: Insert elements at the front and back.
-  - Input Sequence: push_front(10), push_front(20), push_back(30), push_back(40)
-  - Expected Output (forward): 20 10 30 40
-  - Expected Output (backward): 40 30 10 20
-- Test Case 2: Delete the last node.
-  - Operation: pop_back()
-  - Expected Output (forward): 20 10 30
+- Test Case 1: Push elements onto the stack.
+  - Input Sequence: push(10), push(20), push(30)
+  - Expected Output (top to bottom): 30 20 10
+- Test Case 2: Remove the top element.
+  - Operation: pop()
+  - Expected Output: Popped: 30; remaining stack: 20 10
 Time Complexity:
-- Insertion at front: \(O(1)\)
-- Insertion at end with tail pointer: \(O(1)\)
-- Deletion at front/end with head and tail pointers: \(O(1)\)
-- Searching/Traversal: \(O(n)\)
+- Push: \(O(1)\)
+- Pop: \(O(1)\)
+- Peek: \(O(1)\)
+- Display: \(O(n)\)
+- Space Complexity: \(O(n)\)
