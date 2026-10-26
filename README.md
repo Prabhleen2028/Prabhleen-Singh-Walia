@@ -1,16 +1,16 @@
-4. Stack Using Linked List
-Question Description: Implement a Stack using a linked list with operations such as push, pop, peek, and display. Insertion and deletion are performed at the head of the linked list.
+5. Queue Using Array
+Question Description: Implement a linear Queue using an array supporting enqueue, dequeue, front, and display operations. The queue follows FIFO (First In, First Out). In a simple linear array implementation, deleted positions may not be reused without shifting or resetting the queue.
 
 Test Cases:
-- Test Case 1: Push three elements.
-  - Input Sequence: push(5), push(10), push(15)
-  - Expected Output (top to bottom): 15 10 5
-- Test Case 2: Pop the top element.
-  - Operation: pop()
-  - Expected Output: Popped: 15; remaining stack: 10 5
+- Test Case 1: Insert elements into the queue.
+  - Input Sequence: enqueue(10), enqueue(20), enqueue(30)
+  - Expected Output: 10 20 30
+- Test Case 2: Remove the front element.
+  - Operation: dequeue()
+  - Expected Output: Dequeued: 10; remaining queue: 20 30
 Time Complexity:
-- Push: \(O(1)\)
-- Pop: \(O(1)\)
-- Peek: \(O(1)\)
+- Enqueue: \(O(1)\), when space is available
+- Dequeue: \(O(1)\), when using front/rear indices without shifting
+- Front: \(O(1)\)
 - Display: \(O(n)\)
 - Space Complexity: \(O(n)\)
